@@ -1,0 +1,1 @@
+# projetoLavanderiaLol1tri2ds
