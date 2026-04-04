@@ -1,0 +1,105 @@
+/* importando a fonte principal */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+* {
+    /*vai pra todos os elementos*/
+    box-sizing: border-box;
+    margin: 0;
+    /*remove espaços internos*/
+    padding: 0;
+}
+
+body {
+    /*fonte padrao se a roboto der pau*/
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background: #ffffff; 
+    line-height:1.5;
+}
+
+/* MENU CABEÇALHO */
+.menu {
+
+    height: 90px;
+    background: white;
+    /*coloca um do lado do outro*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Mantém logo e links nas pontas */
+    padding: 0 80px;
+}
+
+.logoArea img {
+    width: 400px; 
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    /*espaço entre links*/
+    gap: 40px; 
+}
+
+.nav a{
+
+text-decoration:none;
+
+color:#333;
+
+font-size:16px;
+font-weight:500;
+/*deixa suave*/
+transition:0.3s;
+
+}
+
+/*mouse muda corsinha*/
+.nav a:hover{
+
+color:#184a8c;
+
+}
+
+/* area principal 1, ou seja, o hero que eu te expliquei */
+.hero {
+    background-color: #d1dfff;
+    min-height: 685px;
+    display: flex;
+    /*conteudo so fica em cima*/
+    align-items: flex-end; 
+    /*faz sumir se sair da caixa*/
+    overflow: hidden;
+}
+
+.heroContainer {
+    max-width: 1200px; 
+    width: 100%;
+    /*centraliza, jeito bizarro isso*/
+    margin: auto;
+    display: flex;
+    justify-content: center; 
+    padding: 0 40px;
+}
+
+/*a imag do banner*/
+.imagemHero {
+    /*faz ele ocupar tudo, sem isso é um saco*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /*vertical meio*/
+    align-items: flex-end;
+}
+
+.imagemHero img {
+   
+    width: 1600px; /* força a imagem a ficar grande */
+    height: auto;
+    display: block;
+    /*sobe a imagem*/
+    margin-top: 0px; 
+}
+
+/* area futura*/
+.conteudoFuturo {
+    height: 900px;
+    background: white;
+}
