@@ -13,6 +13,8 @@ body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     background: #ffffff; 
     line-height:1.5;
+    /*nao deixa sobrepor INUTILIZEI*** NAO MEXER DEIXA FEIO*/
+    padding-top: 0px;
 }
 
 /* MENU CABEÇALHO */
@@ -25,6 +27,13 @@ body {
     align-items: center;
     justify-content: space-between; /* Mantém logo e links nas pontas */
     padding: 0 80px;
+    /*mantem no topo*/
+    position: fixed;
+    top: 0
+    left 0;
+    width: 100%;
+    /*deixa na frente de tudo*/
+    z-index: 1000;
 }
 
 .logoArea img {
@@ -102,4 +111,111 @@ color:#184a8c;
 .conteudoFuturo {
     height: 900px;
     background: white;
+}
+
+
+
+/* ===== SERVIÇOS ===== */
+
+.servicos{
+    background:#d8dfee;
+    padding:80px 40px;
+}
+
+.servicos h2{
+    text-align:center;
+    font-size:45px;
+    color:#1f3c88;
+    margin-bottom:80px;
+}
+
+.servicosContainer{
+    max-width:1000px;
+    margin:auto;
+}
+
+/* LINHAS */
+.servicoLinha{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    /*gap:60px;*/
+    margin-bottom:80px;
+}
+
+/* inverter lado */
+.reverso{
+    flex-direction: row;
+}
+
+/* CARD */
+.card{
+    /*aumenta imagem*/
+    width:450px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.cardTitulo{
+    background:#c9d3e3;
+    padding:15px;
+    font-size:20px;
+    font-weight:bold;
+    color:#2b4c7e;
+}
+
+/* TEXTO */
+.texto{
+    max-width:500px;
+}
+
+.texto h3{
+    color:#2b4c7e;
+    margin-bottom:10px;
+}
+
+.texto p{
+    color:#2b4c7e;
+    line-height:1.6;
+}
+
+/* BLOCO FUTURO */
+.placeholder{
+   
+}
+
+
+.areaBotao {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.botaoPedido {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    background: #184a8c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* efeito ao passar o mouse */
+.botaoPedido:hover {
+    background: #12345f;
+}
+
+.botaoPedido {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
 }
