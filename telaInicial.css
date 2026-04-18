@@ -36,8 +36,27 @@ body {
     z-index: 1000;
 }
 
+@media (max-width: 900px) {
+
+    .menu {
+        padding: 0 20px;
+    }
+
+    .nav {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .logoArea img {
+        width: 140px;
+    }
+
+}
+
+
 .logoArea img {
-    width: 400px; 
+    width: 90px; 
+    max-width: 100%;
     height: auto;
 }
 
@@ -45,6 +64,7 @@ body {
     display: flex;
     /*espaço entre links*/
     gap: 40px; 
+    flex-wrap: wrap;
 }
 
 .nav a{
@@ -70,28 +90,31 @@ color:#184a8c;
 /* area principal 1, ou seja, o hero que eu te expliquei */
 .hero {
     background-color: #d1dfff;
-    min-height: 685px;
+    width: 100%;
+
+   padding: 60px 0 0 0; /* espaço interno em vez de altura fixa */
     display: flex;
     /*conteudo so fica em cima*/
-    align-items: flex-end; 
+    align-items: stretch; 
     /*faz sumir se sair da caixa*/
     overflow: hidden;
 }
 
 .heroContainer {
-    max-width: 1200px; 
+    max-width: none; 
     width: 100%;
     /*centraliza, jeito bizarro isso*/
     margin: auto;
     display: flex;
     justify-content: center; 
-    padding: 0 40px;
+    padding: 0px;
 }
 
 /*a imag do banner*/
 .imagemHero {
     /*faz ele ocupar tudo, sem isso é um saco*/
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     /*vertical meio*/
@@ -100,11 +123,13 @@ color:#184a8c;
 
 .imagemHero img {
    
-    width: 1600px; /* força a imagem a ficar grande */
+    width: 100%; /* força a imagem a ficar grande */
     height: auto;
+    max-width: 1600px;
+    object-fit: cover;
     display: block;
     /*sobe a imagem*/
-    margin-top: 0px; 
+     
 }
 
 /* area futura*/
@@ -122,9 +147,9 @@ color:#184a8c;
     padding:80px 40px;
 }
 
-.servicos h2{
+.servicos h1{
     text-align:center;
-    font-size:45px;
+    font-size:40px;
     color:#1f3c88;
     margin-bottom:80px;
 }
@@ -134,33 +159,65 @@ color:#184a8c;
     margin:auto;
 }
 
+
+@media (max-width: 900px) {
+
+    .servicoLinha{
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .reverso{
+        flex-direction: column-reverse; /* ESSENCIAL */
+    }
+
+}
+
+
 /* LINHAS */
 .servicoLinha{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    /*gap:60px;*/
+    gap:60px;
     margin-bottom:80px;
 }
 
-/* inverter lado */
+/* inverter lado
 .reverso{
-    flex-direction: row;
-}
+    flex-direction: row-reverse;
+} */
 
 /* CARD */
 .card{
     /*aumenta imagem*/
-    width:450px;
+    width: 100%;
+    max-width: 500px; /* limite inteligente */
+    display: flex;
+    align-items: center;
+    /* espaço entre imagem e texto */
+    gap: 40px;
     background:white;
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
+ /* RESPONSIVO ESSENCIAL NO MEXE
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}  */
+
 .card img{
-    width:100%;
+    width: 100%;
+    height: auto;
     display:block;
+
 }
 
 .cardTitulo{
@@ -168,22 +225,26 @@ color:#184a8c;
     padding:15px;
     font-size:20px;
     font-weight:bold;
+    text-align: center;
     color:#2b4c7e;
 }
 
 /* TEXTO */
 .texto{
-    max-width:500px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .texto h3{
     color:#2b4c7e;
     margin-bottom:10px;
+     font-size: clamp(18px, 2.5vw, 24px);
 }
 
 .texto p{
     color:#2b4c7e;
     line-height:1.6;
+    font-size: clamp(14px, 1.5vw, 18px);
 }
 
 /* BLOCO FUTURO */
@@ -218,4 +279,13 @@ color:#184a8c;
     display: inline-block;
     text-decoration: none;
     text-align: center;
+}
+
+
+/* coloca o serviços pra funcionar */
+html {
+    scroll-behavior: smooth;
+}
+#servicos {
+    scroll-margin-top: 100px;
 }

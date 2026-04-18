@@ -32,3 +32,4 @@ document.querySelector("#btnCadastrar").addEventListener("click", function(){
     window.location.href = "telaInicial.html";
 
 });
+ 
