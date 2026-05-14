@@ -23,13 +23,19 @@
         <h2>Cadastro</h2>
 
         <input type="text" id="nome" placeholder="Nome completo">
-
         <input type="email" id="email" placeholder="Email">
 
-        <input type="password" id="senha" placeholder="Senha">
+        <div class="password-container">
+            <input type="password" id="senha" placeholder="Senha">
+            <img src="hide.png" alt="Mostrar Senha" class="eye-icon" onclick="togglePassword('senha', this)">
+            <img src="eye.png" alt="Ocultar Senha" class="eye-icon hide" onclick="togglePassword('senha', this)">
+        </div>
 
-        <input type="password" id="confirmarSenha" placeholder="Confirme sua senha">
-
+        <div class="password-container">
+            <input type="password" id="confirmarSenha" placeholder="Confirme sua senha">
+            <img src="hide.png" alt="Mostrar Senha" class="eye-icon" onclick="togglePassword('confirmarSenha', this)">
+            <img src="eye.png" alt="Ocultar Senha" class="eye-icon hide" onclick="togglePassword('confirmarSenha', this)">
+        </div>
         <div class="opcaoLogin">
             <label>
                 <input type="checkbox" id="termos">

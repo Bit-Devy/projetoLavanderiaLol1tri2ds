@@ -1,0 +1,194 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#c6d3f3;
+}
+
+/* TOPO */
+.topo{
+/* fixa tudo no alto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+
+    background:white;
+
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+
+    padding:0 30px;
+
+    z-index:1000;
+    box-sizing: border-box;
+}
+
+/* tentativa de alinhar isso */
+.topo h1{
+    margin: 180;
+    font-size: 28px;
+    text-align: center;
+    flex: 1;
+
+}
+
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.acoes button{
+    margin-left:10px;
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    white-space: nowrap;
+
+}
+
+.historico{
+    background:#ddd;
+}
+
+.novo{
+    background:#4a6edb;
+    color:white;
+}
+
+/* PAINEL */
+.painel{
+    display:flex;
+    gap:20px;
+    padding:30px;
+
+    margin-top: 80px;
+}
+
+/* COLUNAS */
+.coluna{
+    flex:1;
+    background:#e8f3fd;
+    border-radius:20px;
+    padding:20px;
+}
+
+.coluna h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+@media (max-width: 900px) {
+    /* O painel vira coluna (um embaixo do outro) no celular */
+    .painel {
+        flex-direction: column;
+    }
+
+    /* Ajustes no topo para não espremer os botões */
+    .topo {
+        padding: 0 15px; /* Diminui a margem nas laterais */
+    }
+
+    .topo h1 {
+        font-size: 18px; /* Título menor para caber */
+    }
+
+    .acoes button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+/* CARD */
+.card{
+    background:white;
+    border-radius:15px;
+    padding:15px;
+    margin-bottom:20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* HEADER DO CARD */
+.cardTopo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.cardTopo img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+/* INFO */
+.info{
+    font-size:14px;
+    color:#555;
+}
+
+/* BOTÕES */
+.cardBotoes{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-top:10px;
+}
+
+
+.cardBotoes button{
+    padding:5px 15px;
+    border-radius:20px;
+    border:none;
+    cursor:pointer;
+}
+
+.dispensar {
+    background: transparent;
+    color: #7b2cbf;
+    border: 1.5px solid #7b2cbf;
+}
+
+.dispensar:hover {
+    background: #7b2cbf;
+    color: white;
+}
+
+
+.aceitar {
+    background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+    color: white;
+    border: none;
+}
+
+.aceitar:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* css dos icones */
+.icon{
+    width:16px;
+    height:16px;
+    vertical-align:middle;
+    margin-right:5px;
+}
+
+.separador{
+    margin:0 8px;
+    color:#999;
+}

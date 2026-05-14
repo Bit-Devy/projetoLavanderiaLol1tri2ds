@@ -97,6 +97,8 @@ margin-bottom:15px;
 border-radius:30px;
 border:1px solid #ccc;
 font-size:16px;
+/* coloca tudo dentro do formulario */
+box-sizing: border-box;
 
 
 }
@@ -216,4 +218,39 @@ cursor:pointer;
 .novaConta a {
     text-decoration: none;
     color: #7c6aa6;
+}
+
+/* CONTAINER DOS INPUTS DE SENHA */
+.password-container {
+    position: relative;
+    width: 100%;
+    /* margin-bottom não é necessário aqui pois o seu .formulario input já tem margin-bottom: 15px */
+}
+
+/* COMPENSAR O TEXTO PARA NÃO PASSAR POR BAIXO DO ÍCONE */
+.password-container input {
+    /* Sobrescreve o padding do '.formulario input' apenas na direita */
+    padding-right: 45px; 
+}
+
+/* ESTILO E POSIÇÃO DOS VETORES DE OLHO */
+.eye-icon {
+    position: absolute;
+    right: 15px; /* Distância da borda direita do input */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-80%); /* Ajuste fino para o centro do input. Tente -50% ou -80% dependendo da altura */
+    width: 20px; /* Tamanho do ícone */
+    height: auto;
+    cursor: pointer; /* Mãozinha de clique */
+    opacity: 0.6; /* Deixa o ícone levemente transparente para ficar elegante */
+}
+
+/* Efeito ao passar o mouse */
+.eye-icon:hover {
+    opacity: 1;
+}
+
+/* CLASSE UTILITÁRIA PARA ESCONDER */
+.hide {
+    display: none;
 }

@@ -98,6 +98,8 @@ color:#184a8c;
     align-items: stretch; 
     /*faz sumir se sair da caixa*/
     overflow: hidden;
+
+    /* height: clamp(300px, 40vw, 600px); */
 }
 
 .heroContainer {
@@ -106,6 +108,7 @@ color:#184a8c;
     /*centraliza, jeito bizarro isso*/
     margin: auto;
     display: flex;
+    /* justifica pro centro */
     justify-content: center; 
     padding: 0px;
 }
@@ -124,7 +127,7 @@ color:#184a8c;
 .imagemHero img {
    
     width: 100%; /* força a imagem a ficar grande */
-    height: auto;
+    height: 100%;
     max-width: 1600px;
     object-fit: cover;
     display: block;
@@ -287,5 +290,6 @@ html {
     scroll-behavior: smooth;
 }
 #servicos {
-    scroll-margin-top: 100px;
+    /* valor pra nao tampar nao a barra */
+    scroll-margin-top: 90px;
 }

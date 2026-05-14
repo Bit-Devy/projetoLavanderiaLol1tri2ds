@@ -216,3 +216,40 @@ cursor:pointer;
     text-decoration: none;
     color: #7c6aa6;
 }
+
+
+/* Atualize a regra do input para incluir o box-sizing */
+.formulario input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que a largura fique correta */
+}
+
+/* Adicione estas regras ao final do arquivo */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    padding-right: 45px; 
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-80%); /* Ajuste para o centro do input */
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.hide {
+    display: none;
+}
